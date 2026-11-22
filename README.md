@@ -31,7 +31,7 @@ Windows 小副屏扩展
 
 ## 系统要求
 
-- 最低Windows 10，11最佳
+- 最低Windows 10，11最好啦
 - Node.js 22+编译
 - 支持 480P/720P/1080P/4K
 - 读取NVIDIA GPU数据需要安装显卡驱动并可用 `nvidia-smi`，顺序为NVIDIA->AMD->intel
