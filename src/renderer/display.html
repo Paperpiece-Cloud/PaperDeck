@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light" data-background="aurora">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; media-src 'self' data: blob:; connect-src https:;">
+  <title>PaperDeck</title>
+  <link rel="stylesheet" href="display.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient-base"></div>
+    <div class="album-wash" id="albumWash"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="blob blob-4"></div>
+    <div class="grain"></div>
+    <div class="glass-shine"></div>
+  </div>
+
+  <div class="app" id="app">
+    <header class="topbar" id="topbar">
+      <div class="brand">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+            <circle cx="12" cy="12" r="8.6" opacity=".32"/>
+            <path d="M4.2 14.2c2.9-4.9 5.6 4.6 8.5-.2 1.6-2.6 3.1-1.2 4.4.2"/>
+          </svg>
+        </span>
+        <span class="brand-name">PaperDeck</span>
+        <span class="brand-live" id="brandLive"></span>
+      </div>
+      <div class="top-status">
+        <button class="status-pill" id="volumePill" type="button" title="音量" aria-label="音量">
+          <span class="pill-icon" id="volumeIcon"></span><span id="volumeText">--</span>
+        </button>
+        <button class="status-pill" id="networkPill" type="button" title="网络" aria-label="网络">
+          <span class="pill-icon" id="networkIcon"></span><span id="networkText">--</span>
+        </button>
+        <button class="status-pill" id="bluetoothPill" type="button" title="蓝牙" aria-label="蓝牙">
+          <span class="pill-icon" id="bluetoothIcon"></span><span id="bluetoothText">0</span>
+        </button>
+        <span class="status-pill battery-pill" id="batteryPill" title="电池">
+          <span class="pill-icon" id="batteryIcon"></span><span id="batteryText">--</span>
+        </span>
+        <button class="top-icon" id="editButton" type="button" title="编辑小组件布局" aria-label="编辑布局"></button>
+        <button class="top-icon" id="settingsButton" type="button" title="打开设置" aria-label="打开设置"></button>
+      </div>
+    </header>
+
+    <main class="widget-grid" id="grid"></main>
+  </div>
+
+  <div class="edit-toolbar" id="editToolbar" hidden>
+    <div class="edit-toolbar-copy">
+      <span class="edit-dot"></span>
+      <span>拖动卡片调整位置，拖动右下角缩放</span>
+    </div>
+    <button type="button" class="toolbar-button" id="resetLayout">重置布局</button>
+    <button type="button" class="toolbar-button primary" id="finishEditing">完成</button>
+  </div>
+
+  <div id="popoverRoot"></div>
+  <div id="focusRoot"></div>
+  <div id="modalRoot"></div>
+  <div id="toastRoot" class="toast-root"></div>
+  <div id="bootShade" class="boot-shade"></div>
+
+  <script src="icons.js"></script>
+  <script src="display.js"></script>
+</body>
+</html>

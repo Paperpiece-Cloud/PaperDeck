@@ -1,0 +1,107 @@
+{
+  "name": "paperdeck",
+  "version": "1.0.0",
+  "description": "Windows 小副屏扩展：798×480 系统状态仪表盘。",
+  "main": "src/main/main.js",
+  "author": "Paperpiece",
+  "license": "GPL-3.0-only",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paperpiece-Cloud/PaperDeck.git"
+  },
+  "homepage": "https://github.com/Paperpiece-Cloud/PaperDeck#readme",
+  "bugs": {
+    "url": "https://github.com/Paperpiece-Cloud/PaperDeck/issues"
+  },
+  "keywords": [
+    "electron",
+    "windows",
+    "dashboard",
+    "secondary-display",
+    "system-monitor",
+    "smtc",
+    "lyrics",
+    "liquid-glass"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "pack:dir": "electron-builder --win --x64 --dir",
+    "dist": "electron-builder --win --x64"
+  },
+  "dependencies": {
+    "systeminformation": "5.33.23"
+  },
+  "devDependencies": {
+    "electron": "^40.10.6",
+    "electron-builder": "26.18.0"
+  },
+  "build": {
+    "appId": "com.paperdeck.desktop",
+    "productName": "PaperDeck",
+    "copyright": "Copyright © 2026 Paperpiece",
+    "directories": {
+      "output": "release",
+      "buildResources": "assets"
+    },
+    "files": [
+      "src/**/*",
+      "assets/icon.png",
+      "assets/demo-*.jpg",
+      "LICENSE",
+      "NOTICE",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "scripts",
+        "to": "scripts"
+      },
+      {
+        "from": "assets/icon.png",
+        "to": "assets/icon.png"
+      },
+      {
+        "from": "assets/icon.ico",
+        "to": "assets/icon.ico"
+      }
+    ],
+    "asar": true,
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "assets/icon.ico",
+      "artifactName": "PaperDeck-${version}-${arch}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "PaperDeck",
+      "installerIcon": "assets/icon.ico",
+      "uninstallerIcon": "assets/icon.ico",
+      "deleteAppDataOnUninstall": false
+    },
+    "portable": {
+      "artifactName": "PaperDeck-Portable-${version}.${ext}",
+      "requestExecutionLevel": "user"
+    }
+  }
+}
