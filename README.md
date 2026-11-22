@@ -38,7 +38,7 @@ Windows 小副屏扩展
 
 ## 安装
 
-从 [Releases](https://github.com/Paperpiece-Cloud/PaperDeck/releases) 下载 `PaperDeck-1.0.0-x64.exe`。
+从 [Releases](https://github.com/Paperpiece-Cloud/PaperDeck/releases) 下载 `PaperDeck-1.0.0-x64.exe`
 
 **给爷记住一定要管理员身份**，建不起缓存打飞你  
 
