@@ -1,6 +1,5 @@
-# PaperDeck
-
-Windows 小副屏扩展
+## PaperDeck
+**Windows 小副屏扩展**
 继SteamDeck后的现代UI副屏工具控件
 
 [![Release](https://img.shields.io/github/v/release/Paperpiece-Cloud/PaperDeck?display_name=tag&style=flat-square)](https://github.com/Paperpiece-Cloud/PaperDeck/releases)
@@ -8,13 +7,12 @@ Windows 小副屏扩展
 [![Electron](https://img.shields.io/badge/Electron-40-47848F?style=flat-square)](https://www.electronjs.org/)
 [![License](https://img.shields.io/badge/license-GPLv3-blue?style=flat-square)](LICENSE)
 
-![PaperDeck](preview-final.png)
+<img width="520" height="350" alt="屏幕截图 2026-11-23 143336" src="https://github.com/user-attachments/assets/f66c00dd-f733-4cba-b176-0f19e251aa28" />
 
 ## 实例
 
-运行在小爱同学 LX04 上（798×480 横屏）：
-
-<img src="assets/paperdeck-lx04.png" alt="PaperDeck running on Xiaomi Xiaoai LX04" width="720">
+运行在小爱同学 LX04 上（798×480 横屏）：  
+<img width="650" height="480" alt="B5E98558-A669-4FD5-9B08-440253871117(1)" src="https://github.com/user-attachments/assets/5eb70ffd-9e76-4146-b0c9-e3e12da5bdb0" />  
 
 ## 特性
 
